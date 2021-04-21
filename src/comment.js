@@ -1,4 +1,7 @@
 const core = require("@actions/core");
+const github = require("@actions/github");
+const execa = require("execa");
+const fs = require("fs");
 
 module.exports.send = async (context, github_token, thread_number, message) => {
   core.info(`initiating comment process`);
