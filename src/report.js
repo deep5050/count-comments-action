@@ -27,16 +27,11 @@ Good code has a 15-25% comment ratio.
 Excellent code has a > 25% comment ratio.
 Use [this action](https://github.com/deep5050/count-comments-action) on your projects to generate a report like this.`;
 
-  var modified_data = `#### comment-to-code-ratio analysis report for the last push :tada:
+  var modified_data = `#### comment-to-code-ratio analysis report for this PR :tada:
     
 ${report_text}
 ${fixed_footer}`;
 
   return modified_data;
 
-  //   try {
-  //     fs.writeFileSync("report.md", modified_data, "utf-8");
-  //   } catch (error) {
-  //     core.setFailed(`Error in writing the file: ${error.message}`);
-  //   }
 };
