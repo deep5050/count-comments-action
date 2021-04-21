@@ -1,7 +1,7 @@
 const core = require("@actions/core");
 
 module.exports.run_command = function (options) {
-  core.log(`initiating cloc command`);
+  core.info(`initiating cloc command`);
 
   const options_array = options.split(" ");
   try {

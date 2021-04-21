@@ -1,7 +1,7 @@
 const core = require("@actions/core");
 
 module.exports.send = async (context, github_token, thread_number, message) => {
-  core.log(`initiating comment process`);
+  core.info(`initiating comment process`);
 
   const author = context.payload.sender.login;
   const repo_owner = context.payload.repository.owner.login;
@@ -19,7 +19,7 @@ module.exports.send = async (context, github_token, thread_number, message) => {
       body: message,
     });
 
-    core.log(`Successfully commented on the target issue`);
+    core.info(`Successfully commented on the target issue`);
     core.setOutput("comment-url", comment.data.html_url);
   } catch (error) {
     core.setFailed(`Error in commenting the report: ${error.message}`);
