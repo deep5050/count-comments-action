@@ -9,7 +9,7 @@ module.exports.send = async (context, github_token, thread_number, message) => {
   const author = context.payload.sender.login;
   const repo_owner = context.payload.repository.owner.login;
   if (author.includes("[bot]") || author === repo_owner) {
-    console.warning("Avoiding PR opened by bot/repo owner....");
+    core.warning("Avoiding PR opened by bot/repo owner....");
     process.exit(0);
   }
 
