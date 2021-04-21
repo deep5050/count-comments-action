@@ -1,0 +1,37 @@
+{
+  "name": "count-comments-action",
+  "version": "1.0.0",
+  "description": "Count number of comments in a Pull Request",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deep5050/count-comments-action.git"
+  },
+  "keywords": [
+    "comment",
+    "pr",
+    "pull_request",
+    "action",
+    "github",
+    "github_action",
+    "code_quality",
+    "code",
+    "codebase"
+  ],
+  "author": "Dipankar Pal",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/deep5050/count-comments-action/issues"
+  },
+  "homepage": "https://github.com/deep5050/count-comments-action#readme",
+  "dependencies": {
+    "@actions/core": "^1.2.7",
+    "@actions/github": "^4.0.0",
+    "@octokit/rest": "^18.5.2",
+    "@vercel/ncc": "^0.28.3",
+    "execa": "^5.0.0"
+  }
+}

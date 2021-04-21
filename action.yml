@@ -1,0 +1,19 @@
+name: 'count-comments-action'
+description: 'Counts number of comments in a Pull Request'
+author: 'deep5050'
+inputs:
+  GITHUB_TOKEN:
+    description: 'Github Token for authentication'
+    required: true
+
+  options:
+    description: 'command options for the cloc tool' # it is better that you always set it ,check readme
+    required: true
+
+
+runs:
+  using: 'node14'
+  main: 'dist/index.js'
+branding:
+  color: "blue"
+  icon: "activity" 
