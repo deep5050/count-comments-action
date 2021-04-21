@@ -8652,14 +8652,7 @@ const start = async () => {
   }
 };
 
-start()
-  .then(() => {
-    core.info("successfully completed the workflow");
-  })
-  .catch((err) => {
-    core.error("Unexpected Error");
-  });
-
+start();
 })();
 
 module.exports = __webpack_exports__;
