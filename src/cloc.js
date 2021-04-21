@@ -1,3 +1,5 @@
+const core = require("@actions/core");
+
 module.exports.run_command = function (options) {
   core.log(`initiating cloc command`);
 

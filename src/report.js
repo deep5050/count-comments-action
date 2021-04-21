@@ -1,3 +1,5 @@
+const core = require("@actions/core");
+
 module.exports.parse = function () {
   var report_text = "";
 

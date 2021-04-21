@@ -8365,7 +8365,9 @@ function wrappy (fn, cb) {
 /***/ }),
 
 /***/ 5257:
-/***/ ((module) => {
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+const core = __nccwpck_require__(4613);
 
 module.exports.run_command = function (options) {
   core.log(`initiating cloc command`);
@@ -8382,7 +8384,9 @@ module.exports.run_command = function (options) {
 /***/ }),
 
 /***/ 1010:
-/***/ ((module) => {
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+const core = __nccwpck_require__(4613);
 
 module.exports.send = async (context, github_token, thread_number, message) => {
   core.log(`initiating comment process`);
@@ -8414,7 +8418,9 @@ module.exports.send = async (context, github_token, thread_number, message) => {
 /***/ }),
 
 /***/ 8270:
-/***/ ((module) => {
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+const core = __nccwpck_require__(4613);
 
 module.exports.parse = function () {
   var report_text = "";
