@@ -1,5 +1,5 @@
 # count-comments-action
-count number of comments the codebase of a PR before you merge :tada:
+count number of comments in the codebase of a PR before you merge it:tada:
 
 ## Example
 
