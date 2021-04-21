@@ -31,5 +31,5 @@ start()
     core.info("successfully completed the workflow");
   })
   .catch((err) => {
-    core.error("Error : ${err}");
+    core.error("Unexpected Error");
   });
