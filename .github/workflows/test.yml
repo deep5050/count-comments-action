@@ -7,9 +7,20 @@ jobs:
   test:
     name: setup environment
     runs-on: ubuntu-latest
+    
     steps:
-      - name: checkout
-        uses: actions/checkout@v2
+      - uses: xt0rted/pull-request-comment-branch@v1
+        id: comment-branch
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/checkout@v2
+        if: success()
+        with:
+          ref: ${{ steps.comment-branch.outputs.head_ref }}
+
+      - run: git rev-parse --abbrev-ref HEAD
+      - run: git rev-parse --verify HEAD
         
       - name: install cloc
         uses: actions/setup-node@v1
@@ -21,4 +32,4 @@ jobs:
         uses: ./
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          options: '--quiet ./ --hide-rate --git --unix --md --out=report.md --timeout=20 --by-percent=cmb --by-file --exclude-dir=node_mudules --exclude-lang=JSON,XML'
+          options: '--quiet ./ --hide-rate --git --unix --md --out=report.md --timeout=20 --by-percent=cmb --by-file --exclude-dir=node_modules --exclude-lang=JSON,XML'
