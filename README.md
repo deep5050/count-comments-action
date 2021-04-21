@@ -2,6 +2,9 @@
 count number of comment in a PR before you merge
 
 ## Example
+
+![example](./screen.jpg)
+
 #### comment-to-code-ratio analysis report for this PR :tada:
         
  File|blank %|comment %|code
