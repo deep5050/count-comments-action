@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/deep5050/count-comments-action#readme",
   "dependencies": {
-    "@actions/core": "^1.2.7",
+    "@actions/core": "^1.9.1",
     "@actions/github": "^4.0.0",
     "@octokit/rest": "^18.5.2",
     "@vercel/ncc": "^0.28.3",
